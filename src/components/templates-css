@@ -1,0 +1,390 @@
+Paramétrages css
+1-Texte
+  typographie
+  taille du texte 
+  couleur du texte
+  espacement du texte
+  block texte  
+   padding
+   border
+   margin
+
+
+----------
+Différentes dimensions : 
+Contenant : 
+  Technique 
+    - compatibilité navigateur
+Firefox | Chrome | Opéra | Safari | Internet Explorer | Edge 
+    - responsive [ordinateur, tablette, téléphone]
+Firefox mobile | Chrome Android | Opera mobile | Safari Mobile | Android browser 
+    - Spécificité ou facilité = container -> boostrap "à lire"  
+      SEUIL / ADAPATATION PERMANENTE
+    - sécurité
+  Mise en forme : 
+          - ton / style / indentité graphique => cohérence
+          - traduction -> site 
+    UX design 
+      - statique
+      - mouvement : 
+      slow motion | animation |
+      - média
+
+Contenu : 
+    - ton de la marque
+    - SEO [algorithme] / Mots clès
+    - copywritting
+    - call to action 
+        -> créer un entonoir
+
+-----
+Process 
+[contenu ok : identité, ton, copywritting]
+- Prototype site [contenant ; SEO ; copywritting ; images ; animations // cohérence : style ]
+
+Mappage du site ?
+
+1/ CSS - fiche de style 
+  A - Statiques 
+  a. texte
+      titre
+      paragraphe
+      liste
+      ...
+  b. bouton et liens [mise en forme + animation]
+  d. tableau [faire un templates css juste pour les tableaux]
+  c. îcones
+  d. block
+  e. layout
+  f. images 
+  g. média
+  
+  B - Animations 
+
+  -> components | layout
+
+2/ intégrer les éléments : fonts / images 
+
+3/ paramétrage des images 
+
+4/ codage des components 
+
+5/ paramétrage des animations 
+
+6/ vérification des liens 
+
+7/ test utilisateurs
+
+8/ mise en ligne 
+
+9/ KPI's -> rectification
+----------
+
+CSS 
+-------------------------------------------------
+TEXTE  
+    [h1] 
+    [h2, h3, h4, h5, h6]
+    p
+    . 
+    #
+
+
+STANDARD : 
+    text color 
+      color name | Hex value | RGB value | rgb() | RGB + opacity
+    background-color :
+      color name | Hex value | RGB value | rgb() | RGB + opacity
+    text-align : 
+      center | left | right | justify
+    text-align-last : [la dernière ligne du paragraphe]
+      center | left | right | justify
+    text-direction : 
+      {direction : rtl ; 
+      unicode-bidi: bidi-override ;}
+    vertical-align : [set the vertical alignment of an image un a text]
+      baseline | text-top | text-bottom | sub | super
+
+TEXTE DECORATION 
+    text-decoration-line : [required]
+      overline | line-through | underline | overline underline
+    text-decoration-color : [optional]
+      color name | Hex value | RGB value | rgb() | RGB + opacity
+    text-decoration-style : [optional]
+      solid | double | dotted | dashed | wavy
+    text-decoration-thikness : [optional]
+      auto | px | %
+    text-decoration : (line) (color) (style) (thickness)
+    text-decoration : none ; [remove the underline from links] 
+
+TEXTE TRANSFORMATION PROPERTY
+    text-transform :
+      uppercase | lowercase | capitalize
+    text-indent :
+      auto | px | % | em |em %
+    letter-spacing :
+      auto | px | % | em |em %
+    word-spacing : 
+      auto | px | % | em |em %
+    white-space :
+      nowrap | normal |em %
+
+FONT-STYLE 
+    font-style : 
+    normal | italic | oblique
+    font-weight :
+    normal | bold
+    font-variant : 
+    normal |small-caps
+    
+TEXT SHADOW
+    text-shadow : (horizontal) (vertical) (blur effect) (couleur)
+ 
+FONTS FAMILY
+    generic families (*web safe font): 
+      serif 
+        Times New Roman*|Georgia*|Garamond*|
+     sans-serif
+        Arial*|Verdana*|Helvica*|Tahoma*|Trebuchet*
+      monospace
+        Courier New*|Lucida Console|Monaco|
+      cursive
+        Brush script MT*|Lucida handwriting
+      fantasy
+        Copperplate|Papyrus
+
+FONT-SIZE 
+ABSOLUTE 
+- Sets the text ti a specified size
+- does not allow a user to change de text size in all browser
+- physical size of the output is know
+
+RELATIVE
+- sets tge size relative to surrounding elements
+- allows a user to change the text size in browsers
+
+outils : calculatrice ?? 
+
+px | full control
+
+Relative au texte 
+em | 1em=16px [let the browser resize the text]
+em + % | -> it show the same text size in all browsers, and allows all browsers to zoom or resize the text. 
+    body {
+      font-size : 100%
+    }
+    h1 {
+      2.5em 
+    }
+
+Relative au viewport 
+vw | "viewport widht" | -> 1vw = 1% of the viewport widht. 
+vh | -> 1vh = 1% de la hauteur du viewport / permettre à un élément de s'adapter à la hauteur de la fenêtre
+vmin | 
+vmax | hauteur 1000 px (viewport) - 1 wmax = 10 px
+
+Raccourci CSS Font Property 
+  - font-style 
+  - font-variant
+  - font-weight
+  - font-size/line-height
+  - font-family 
+  font: (size) (style) (variant) (weight) (line-height) (family) ... etc;
+
+-------------------------------------------------
+<ul>
+<ol>
+list-style-type
+cercle | square | upper-roman | lower-alpha
+list-style-position
+outside | inside
+list-style-type : [remplacer le style par défaut]
+list-style-type: ; 
+margin : 0
+padding : 0
+-------------------------------------------------
+Icons
+Font Awesome Icons
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<i class="glyphicon glyphicon-cloud"></i>
+Boostrap Icons
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<i class="material-icons">cloud</i>
+Google Icons
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<i class="material-icons">cloud</i>
+-------------------------------------------------
+Styling links 
+a:link                   | a:visited                   | a:hover                             | a:active
+a normal, unvisited link | a link the user has visited | a link when the user mouses over it | a link at the moment it is click
+Text décoration 
+none | underline
+cursor LINK + BUTTON
+auto | crosshair | default | e-resize | help | move | n-resize | nw-resize | pointer | progress | s-resize | se-resize | sw-resize | sw-resize | text | wait 
+------------------------------------------------
+CSS Layout => component construction === à voir pour les templates, comment construire 
+DISPLAY PROPERTY : property specifies if/how an element is displayed. 
+block-level elements | Inline elements
+full widht           | widht as necessary
+display => hide or show elements without deleting and recreating them
+none | inline | block
+hidden element
+visibility
+hidden |
+
+WIDTH AND MAX-WIDHT
+widht 
+max-wight => when the browser adds a horizontal scrollbar 
+
+THE POSITION PROPERTY
+position 
+static | relative (adjust) | fixed | absolute | sticky
+
+
+
+
+
+
+
+
+CSS : FICHE DE DEMARRAGE 
+
+STATIQUES
+-----------------------------------------------------------
+template [h1, h2, h3, h4, h5, h6, p, ., #] {
+color: ;
+background-color: ; 
+text-align: ;
+text-align-last : ;
+vertical-align: ; (avec un autre élément)
+
+font-style: ;
+font-weight: ; 
+font-variant: ;
+font-family: ;
+font-size: ;
+[font: (size) (style) (variant) (weight) (line-height) (family) ... etc;]
+
+text-decoration-line: ;
+text-decoration-color: ;
+text-decoration-thikness: ;
+text-decoration : (line) (color) (style) (thickness) ;
+
+text-indent: ; 
+letter-spacing: ;
+word-spacing: ;
+white-space: ;
+
+text-shadow: (horizontal) (vertical) (blur effect) (couleur);
+
+text-transform : ; 
+
+direction : rtl ; 
+unicode-bidi: bidi-override ;
+}
+
+------------------------------------------------------------
+
+template ul/ol 
+{
+list-style-type: ;
+list-style-position: ;
+
+list-style-type: none
+padding: 0
+margin: 0
+
+liste-style: (type) (position) (image)
+
+backgroung : ;
+color: ; 
+
+margin: ;
+padding: ;
+}
+
+--------------------------------------------------------------
+Template LINK
+<a target="_blank">
+a:link {
+  color: ;
+  background-color: ; 
+  text-align: ;
+  font: (size) (style) (variant) (weight) (line-height) (family) ... etc
+  letter-spacing: ;
+  cursor: ;
+}
+a:visited {
+  color: ;
+  background-color: ; 
+  text-align: ;
+  font: (size) (style) (variant) (weight) (line-height) (family) ... etc
+  letter-spacing: ;
+  cursor: ;
+}
+a:hover {
+  color: ;
+  background-color: ; 
+  text-align: ;
+  font: (size) (style) (variant) (weight) (line-height) (family) ... etc
+  letter-spacing: ;
+  cursor: ;
+}
+
+a:active {
+  color: ;
+  background-color: ; 
+  text-align: ;
+  font: (size) (style) (variant) (weight) (line-height) (family) ... etc
+  letter-spacing: ;
+  cursor: ; 
+}
+----------------------------------------------
+template button :
+<a target="_blank">
+a:link
+{ 
+  color: ;
+  background-color: ; 
+  text-align: ;
+  font: (size) (style) (variant) (weight) (line-height) (family) ... etc
+  letter-spacing: ;
+  text-align : ;
+  text-decoration : ;
+  cursor: ;
+}
+a:visited
+{ 
+  color: ;
+  background-color: ; 
+  text-align: ;
+  font: (size) (style) (variant) (weight) (line-height) (family) ... etc
+  letter-spacing: ;
+  text-align : ;
+  text-decoration : ;
+  cursor: ;
+}
+a:hover
+{ 
+  color: ;
+  background-color: ; 
+  text-align: ;
+  font: (size) (style) (variant) (weight) (line-height) (family) ... etc
+  letter-spacing: ;
+  text-align : ;
+  text-decoration : ;
+  cursor: ;
+}
+a:active
+<a target="_blank"> 
+{ 
+  color: ;
+  background-color: ; 
+  text-align: ;
+  font: (size) (style) (variant) (weight) (line-height) (family) ... etc
+  letter-spacing: ;
+  text-align : ;
+  text-decoration : ;
+  cursor: ;
+}
+-----------------------------------------------------
