@@ -14,7 +14,7 @@ const nindex = () => {
     <Nsection1/>
     <Nsection2/>
     <Nsection3/>
-    <h1>Nina</h1>
+    <h1>Nina!</h1>
     </>
     )
 
